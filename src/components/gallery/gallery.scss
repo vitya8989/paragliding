@@ -87,6 +87,13 @@
   background: #FF00B8;
   z-index: 2;
   cursor: pointer;
+  transition: background 0.25s;
+
+  &:hover {
+    @media #{$mouse-device} {
+      background: #ff33c6;
+    }
+  }
 
   @media ($tablet) {
     display: none;

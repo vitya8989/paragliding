@@ -1216,6 +1216,8 @@ main {
   background: #FF00B8;
   z-index: 2;
   cursor: pointer;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
 }
 
 .gallery__slider_prev svg,
@@ -2721,6 +2723,11 @@ main {
 
   .footer__social_link:hover svg path {
     fill-opacity: 0.8;
+  }
+
+  .gallery__slider_prev:hover,
+  .gallery__slider_next:hover {
+    background: #ff33c6;
   }
 }
 
