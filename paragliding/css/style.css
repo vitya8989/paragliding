@@ -2170,10 +2170,10 @@ main {
     background: linear-gradient(180deg, #748BDA 47.16%, #ABBBF0 72.13%, rgba(255, 255, 255, 0.66) 100%);
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
-    -webkit-transition: opacity 0.8s, visibility 0.8s, -webkit-transform 0.4s;
-    transition: opacity 0.8s, visibility 0.8s, -webkit-transform 0.4s;
-    transition: opacity 0.8s, visibility 0.8s, transform 0.4s;
-    transition: opacity 0.8s, visibility 0.8s, transform 0.4s, -webkit-transform 0.4s;
+    -webkit-transition: opacity 0.4s, visibility 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, visibility 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+    transition: opacity 0.4s, visibility 0.4s, transform 0.4s, -webkit-transform 0.4s;
     opacity: 0;
     visibility: hidden;
     -webkit-transform: translateY(-120%);
