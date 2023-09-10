@@ -1,0 +1,210 @@
+.callback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000000, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.4s, opacity 0.4s;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.callback__body {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #92A8EE 25.06%, #C4D0F9 66.67%, rgba(242, 245, 255, 0.66) 100%);
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.05);
+  padding: 70px 60px 60px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+
+  @media ($tablet3) {
+    padding: 60px 25px 40px;
+    max-width: 345px;
+  }
+}
+.callback__close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    width: 18px;
+    height: 2px;
+    top: calc(50% - 1px);
+    left: 6px;
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    opacity: 0.6;
+    border-radius: 5px;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+.callback__content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+.callback__title {
+  color: #FFF;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  @media ($tablet3) {
+    font-size: 16px;
+  }
+}
+.callback__form {
+  margin-top: 30px;
+
+  @media ($tablet3) {
+    margin-top: 20px
+  }
+}
+.callback__input {
+  margin-top: 20px;
+  position: relative;
+
+  @media ($tablet3) {
+    margin-top: 10px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+  span {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s, visibility 0.25s;
+    position: absolute;
+    top: 2px;
+    right: 25px;
+    color: #F00;
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 170%;
+  }
+
+  input, textarea {
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.60);
+    width: 100%;
+    height: 100%;
+    padding: 20px 25px;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 20px;
+    color: #060E2C;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    transition: background 0.25s;
+
+    @media ($tablet3) {
+      padding: 20px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &::placeholder {
+      color: #666973;
+    }
+
+    &:focus {
+      background: #FFF;
+    }
+    &.error + span {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  textarea {
+    resize: none;
+    border-radius: 40px;
+    height: 136px;
+
+    @media ($tablet3) {
+      height: 91px;
+      border-radius: 25px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+
+      @media (max-width: 767px) {
+        width: 0;
+      }
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #e4e4e2;
+      border-radius: 2px
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #c4c4c4;
+      border-radius: 2px
+    }
+  }
+}
+.callback__submit {
+  display: block;
+  cursor: pointer;
+  width: 176px;
+  margin: 30px auto 0;
+
+  @media ($tablet3) {
+    width: 100px;
+    margin: 20px auto 0;
+  }
+}
+.callback__text {
+  margin-top: 20px;
+  color: #FFF;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 190%;
+
+  @media ($tablet3) {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.callback__ok {
+  display: block;
+  margin: 30px auto 0;
+  width: 100%;
+  max-width: 151px;
+
+  @media ($tablet3) {
+    margin: 20px auto 0;
+    max-width: 82px;
+  }
+}

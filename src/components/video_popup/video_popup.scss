@@ -1,0 +1,70 @@
+.video_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000000, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.4s, opacity 0.4s;
+  padding: 35px;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.video_popup__body {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+.video_popup__close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -30px;
+  right: -30px;
+  cursor: pointer;
+  z-index: 2;
+
+  &::before,
+  &::after {
+    width: 18px;
+    height: 2px;
+    top: calc(50% - 1px);
+    left: 6px;
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    border-radius: 5px;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+.video_popup__video {
+  display: none;
+  padding-top: 56.33%;
+  position: relative;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &.active {
+    display: block;
+  }
+}

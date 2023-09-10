@@ -1,0 +1,72 @@
+@import "null";
+@import "variables";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "fonts";
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: Prosto One, sans-serif;
+	font-weight: 600;
+	background: #ffffff;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	&.this--overflow {
+		overflow: hidden;
+	}
+	-webkit-tap-highlight-color: transparent;
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 30px;
+
+	@media (max-width: 1400px) {
+		max-width: 1260px;
+	}
+
+	&.this--big {
+		max-width: 1780px;
+
+		@media (max-width: 1400px) {
+			max-width: 1260px;
+		}
+	}
+}
+main {
+	flex: 1 0 auto;
+	background: #ffffff;
+}
+
+@import "blocks/title";
+@import "blocks/btn";
+
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/main_top/main_top";
+@import "../components/about/about";
+@import "../components/products/products";
+@import "../components/other/other";
+@import "../components/gallery/gallery";
+@import "../components/choose/choose";
+@import "../components/how/how";
+
+@import "../components/callback/callback";
+@import "../components/video_popup/video_popup";
+

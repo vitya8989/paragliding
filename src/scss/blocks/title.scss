@@ -1,0 +1,36 @@
+.h2_title {
+  color: #060E2C;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  padding-top: 20px;
+
+  &.this--wh {
+    color: #ffffff;
+    &::before {
+      background: #ffffff;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    font-size: 32px;
+    padding-top: 15px;
+  }
+
+  @media ($tablet3) {
+    font-size: 24px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100px;
+    background: #060E2C;
+    left: calc(50% - 50px);
+  }
+}

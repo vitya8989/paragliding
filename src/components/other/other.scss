@@ -1,0 +1,137 @@
+.other {
+  padding: 100px 0 0 0;
+
+  @media (max-width: 1400px) {
+    padding: 80px 0 0 0;
+  }
+  @media ($tablet3) {
+    padding: 60px 0 0 0;
+  }
+}
+.other__content {
+  @media (max-width: 1400px) {
+    max-width: 1260px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+}
+.other__subtitle {
+  max-width: 900px;
+  margin: 20px auto 0;
+  color: #666973;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+
+  @media (max-width: 1400px) {
+    margin: 15px auto 0;
+    font-size: 16px;
+  }
+  @media ($tablet3) {
+    font-size: 14px;
+  }
+}
+.other__links {
+  margin-top: 60px;
+  display: flex;
+  margin-left: -40px;
+
+  @media (max-width: 1400px) {
+    margin-top: 40px;
+  }
+  @media ($desktop) {
+    margin-left: -20px;
+  }
+  @media ($tablet) {
+    margin-bottom: -20px;
+    flex-wrap: wrap;
+  }
+  @media ($tablet3) {
+    margin-top: 20px;
+  }
+}
+.other__link {
+  width: calc(25% - 40px);
+  margin-left: 40px;
+
+  @media ($desktop) {
+    margin-left: 20px;
+    width: calc(25% - 20px);
+  }
+  @media ($tablet) {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+  &:first-child {
+    .other__link_body {
+      img {
+        @media (min-width: 1400.1px) {
+          border-radius: 0 10px 10px 0;
+        }
+      }
+    }
+  }
+  &:last-child {
+    .other__link_body {
+      img {
+        @media (min-width: 1400.1px) {
+          border-radius: 10px 0 0 10px;
+        }
+      }
+    }
+  }
+}
+.other__link_body {
+  padding-top: 144.44%;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+.other__link_text {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 160px;
+  z-index: 2;
+  text-align: center;
+  color: #FFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+
+  @media (max-width: 1400px) {
+    font-size: 28px;
+    bottom: 100px;
+  }
+  @media ($desktop) {
+    font-size: 20px;
+    bottom: 100px;
+  }
+  @media ($tablet3) {
+    font-size: 16px;
+    bottom: 50px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 1px;
+    background: #ffffff;
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!--    <link rel="icon" href="favicon.ico"> &lt;!&ndash; 32×32 &ndash;&gt;-->
+    <!--    <link rel="apple-touch-icon" href="apple-touch-icon.png">  &lt;!&ndash; 180×180 &ndash;&gt;-->
+    <!--    <link rel="manifest" href="/site.webmanifest">-->
+    <title>Paragliding</title>
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/inputmask.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+    @@include('components/header/header.html')
+    <main class="main">
+        @@include('components/main_top/main_top.html')
+        @@include('components/about/about.html')
+        @@include('components/products/products.html')
+        @@include('components/other/other.html')
+        @@include('components/gallery/gallery.html')
+        @@include('components/choose/choose.html')
+        @@include('components/how/how.html')
+    </main>
+    @@include('components/footer/footer.html')
+    @@include('components/callback/callback.html')
+    @@include('components/video_popup/video_popup.html')
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/fancybox.umd.js"></script>
+<script src="js/jquery.inputmask.bundle.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

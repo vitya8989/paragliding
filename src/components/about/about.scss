@@ -1,0 +1,111 @@
+.about {
+    padding: 60px 0 0;
+
+    @media ($tablet3) {
+        padding: 60px 0 0;
+    }
+}
+.about__subtitle {
+    margin-top: 20px;
+    color: #666973;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 160%;
+
+    @media ($tablet3) {
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 150%;
+    }
+}
+.about__row_wr {
+    @media ($tablet) {
+        padding: 0 30px;
+    }
+}
+.about__row {
+    margin-top: 60px;
+    display: flex;
+    @media ($tablet) {
+        flex-wrap: wrap;
+        margin-left: -20px;
+        margin-bottom: -20px;
+    }
+    @media ($tablet3) {
+        margin-top: 20px;
+    }
+}
+.about__img_wr {
+    flex: 1 1 auto;
+    position: relative;
+    min-width: 360px;
+    overflow: hidden;
+
+    &:first-child {
+        border-radius: 0 10px 10px 0;
+        @media ($tablet) {
+            border-radius: 5px
+        }
+    }
+    &:last-child {
+        border-radius: 10px 0 0 10px;
+        @media ($tablet) {
+            border-radius: 5px
+        }
+    }
+
+    @media ($desktop) {
+        min-width: 300px;
+    }
+    @media ($tablet) {
+        min-width: 0;
+        width: calc(50% - 20px);
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+}
+.about__img {
+    @media ($tablet) {
+        padding-top: 144.285%;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+.about__text {
+    color: #666973;
+    text-align: justify;
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 190%;
+    margin: 0 110px;
+    max-width: 800px;
+
+    @media ($desktopBig) {
+        max-width: 550px;
+        margin: 0 65px;
+        font-size: 16px;
+    }
+    @media ($desktop) {
+        max-width: 550px;
+        margin: 0 30px;
+        font-size: 16px;
+    }
+    @media ($tablet) {
+        order: -1;
+        width: calc(100% - 20px);
+        max-width: none;
+        margin: 0 0 20px 20px;
+    }
+    @media ($tablet3) {
+        font-size: 14px;
+    }
+}

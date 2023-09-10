@@ -1,0 +1,129 @@
+.gallery {
+  padding: 100px 0 0 0;
+  overflow: hidden;
+
+  @media (max-width: 1400px) {
+    padding: 80px 0 0 0;
+  }
+  @media ($tablet3) {
+    padding: 60px 0 0 0;
+  }
+}
+.gallery__content {
+  padding-bottom: 70px;
+
+  @media (max-width: 1400px) {
+    padding-bottom: 50px;
+  }
+}
+.gallery__subtitle {
+  color: #666973;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-top: 20px;
+
+  @media (max-width: 1400px) {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  @media ($tablet3) {
+    font-size: 14px;
+  }
+}
+.gallery__slider_wr {
+  margin-top: 60px;
+  position: relative;
+
+  @media (max-width: 1400px) {
+    margin-top: 40px;
+  }
+  @media ($tablet3) {
+    margin-top: 20px;
+  }
+}
+.gallery__slider {
+  padding: 0 145px;
+
+  @media (max-width: 1400px) {
+    padding: 0 80px;
+  }
+  @media ($tablet3) {
+    padding: 0 85px;
+  }
+}
+.gallery__slide_img {
+  display: block;
+  position: relative;
+  padding-top: 144.44%;
+
+  &.this--video {
+    cursor: pointer;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+.gallery__slider_prev,
+.gallery__slider_next {
+  position: absolute;
+  top: calc(50% - 36px);
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: #FF00B8;
+  z-index: 2;
+  cursor: pointer;
+
+  @media ($tablet) {
+    display: none;
+  }
+
+  svg {
+    width: 36px;
+    height: 22px;
+  }
+}
+.gallery__slider_prev {
+  left: 0;
+}
+.gallery__slider_next {
+  right: 0;
+}
+.gallery__slider_pagination.swiper-pagination-bullets {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  text-align: center;
+  height: 10px;
+
+  @media (max-width: 1400px) {
+    bottom: -40px;
+  }
+  .swiper-pagination-bullet {
+    opacity: 1;
+    border-radius: 10px;
+    background: #C5C5C5;
+    width: 14px;
+    height: 10px;
+    transition: width 0.25s;
+
+    &.swiper-pagination-bullet-active {
+      width: 40px;
+      background: #666973;
+    }
+  }
+}
