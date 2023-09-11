@@ -10,6 +10,12 @@
     background: var(--F, #FFF);
     box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.05);
   }
+
+  .container.this--big {
+    @media ($mobile) {
+      padding: 0 15px;
+    }
+  }
 }
 .header__content {
   position: relative;
@@ -32,6 +38,11 @@
   }
 }
 .header__logo {
+  width: 100px;
+
+  img {
+    width: 100%;
+  }
   .header_logo_img_dark {
     display: none;
   }
@@ -47,11 +58,7 @@
   z-index: 3;
 
   @media ($mobile) {
-    width: 38px;
-
-    img {
-      width: 100%;
-    }
+    display: none;
   }
 }
 .header__menu {
@@ -168,10 +175,7 @@
     }
     &.this--mobile {
       display: flex;
-      order: -1;
-      width: 100%;
       justify-content: center;
-      margin-bottom: 5px;
     }
   }
 }

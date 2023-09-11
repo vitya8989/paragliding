@@ -251,8 +251,13 @@ main {
 }
 
 .header__logo {
+  width: 100px;
   position: relative;
   z-index: 3;
+}
+
+.header__logo img {
+  width: 100%;
 }
 
 .header__logo .header_logo_img_dark {
@@ -2615,6 +2620,10 @@ main {
 }
 
 @media (max-width: 639px) {
+  .header .container.this--big {
+    padding: 0 15px;
+  }
+
   .header__content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2623,11 +2632,7 @@ main {
   }
 
   .header__logo {
-    width: 38px;
-  }
-
-  .header__logo img {
-    width: 100%;
+    display: none;
   }
 
   .header__menu {
@@ -2642,14 +2647,9 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 5px;
   }
 
   .header__wa {
